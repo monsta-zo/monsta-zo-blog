@@ -11,7 +11,7 @@ docs:
   - title: "Front-end"
     children:
       - title: "Internet"
-        url: /categories/
+        url: "https://monsta-zo.github.io/tags/#%EC%9D%B8%ED%84%B0%EB%84%B7"
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
