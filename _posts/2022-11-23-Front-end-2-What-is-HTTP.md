@@ -2,7 +2,7 @@
 layout : single
 title : "[Front-end][Internet]HTTP란?"
 categories: Front-end
-tag : [Front-end,Internet] 
+tag : [Internet] 
 toc: true
 toc_sticky: true
 author_profile: false
