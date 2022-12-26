@@ -15,8 +15,6 @@ sidebar:
 
 > "As a web developer, learning the internals of browser operations helps you make better decision and know the justifications behind development best practices."  - **Paul Irish** 
 
-
-
 웹 브라우저는 가장 널리 사용되는 소프트웨어이다. 
 
 'google.com' 을 주소창에 썼을 때 구글 홈페이지가 표시되는 동안  뒤에서는 무슨 일이 
