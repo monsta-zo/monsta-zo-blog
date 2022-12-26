@@ -18,6 +18,9 @@ docs:
     children:
       - title: "database"
         url: "https://monsta-zo.github.io/tags/#database"
+      - title: "자료구조"
+        url: "https://monsta-zo.github.io/tags/#database"
+
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
