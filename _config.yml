@@ -272,6 +272,6 @@ defaults:
       related: true
       show_date: true
       sidebar:
-        nav: "main"
+        nav: "docs"
 
 date_format: "%Y-%m-%d"
