@@ -1,6 +1,6 @@
 ---
 layout : single
-title : "[Front-end][Internet]HTTP란?"
+title : "[Internet]HTTP란?"
 categories: Front-end
 tag : [Internet] 
 toc: true

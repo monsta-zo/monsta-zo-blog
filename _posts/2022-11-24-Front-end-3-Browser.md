@@ -1,6 +1,6 @@
 ---
 layout : single
-title : "[Front-end][Internet]Browser에 대해서"
+title : "[Internet]Browser에 대해서"
 categories: Front-end
 tag : [Internet] 
 toc: true
