@@ -1,13 +1,14 @@
 ---
 layout : single
-title : "[Internet]HTTP란?"
+title : "[Front-end][Internet]HTTP란?"
 categories: Front-end
-tag : [Internet] 
+tag : [Front-end,Internet] 
 toc: true
 toc_sticky: true
 author_profile: false
 sidebar:
-    nav: "docs"
+ nav: "docs"
+
 ---
 
 ## HTTP란 무엇일까?
