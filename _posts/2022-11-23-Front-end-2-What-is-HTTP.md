@@ -6,7 +6,8 @@ tag : [Front-end,Internet]
 toc: true
 toc_sticky: true
 author_profile: false
-
+sidebar:
+    nav: "docs"
 ---
 
 ## HTTP란 무엇일까?
