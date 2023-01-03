@@ -15,9 +15,9 @@ sidebar:
 ### 브라우저의 주요 기능
 
 > 웹 브라우저는 가장 널리 사용되는 소프트웨어이다.
->
+> 
 > 'google.com' 을 주소창에 썼을 때 구글 홈페이지가 표시되는 동안
->
+> 
 > 뒤에서는 무슨 일이 일어나는지 알아보자.
 
 - 선택한 웹 리소스를 서버에 요청하고 그것을 보여주는 것
@@ -31,9 +31,9 @@ sidebar:
 2. 브라우저 엔진 : UI 와 렌더링 엔진 간의 작업을 marshal ( 정렬 )
 
 3. 렌더링 엔진 : 리소스를 보여주는 역할
-
+   
    > 예를 들어, 리소스가 HTML이라면 엔진이 HTLM과 CSS 를 파싱하고 그것을 화면에
-   >
+   > 
    > 출력한다
 
 4. 네트워킹 : HTTP 요청과 같은 네트워크 호출을 위해 플랫폼 독립적인 인터페이스 구현을 사용
@@ -51,12 +51,12 @@ sidebar:
 ### 렌더링 엔진
 
 > 브라우저마다 다른 엔진을 사용한다
->
+> 
 > IE : Trident , Firefox : Gecko , Safari : Webkit, Chrome : Bling(Webkit)
->
+> 
 > Webkit은 Mac 및 Windows를 지원하도록 Apple에서 수정한 렌더링 엔진
 
-#### 기본 흐름
+#### 주요 흐름
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/bPlYx9xODQH4X1KuUNpc.png?auto=format" title="" alt="렌더링 엔진 기본 흐름" data-align="center">
 
@@ -68,6 +68,36 @@ sidebar:
 
 4. "painting" : render tree를 순회해서 UI 백엔드를 통해 각 노드를 painting
 
-#### 기본 흐름의 예
+#### 주요 흐름의 예
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/S9TJhnMX1cu1vrYuQRqM.png?auto=format" title="" alt="WebKit 기본 흐름." data-align="center">
+
+### DOM
+
+>  구문 분석을 통해 나온 parse tree 는 DOM 요소와 특성으로 구성 되어있다
+
+- DOM(Document Object Model) : HTML의 객체 표현
+
+- tree 의 root 는 'Document'
+
+- markup 과 1대1 관계를 가진다 
+
+```html
+<html>
+  <body>
+    <p>
+      Hello World
+    </p>
+    <div> <img src="example.png"/></div>
+  </body>
+</html>
+
+```
+
+ 
+
+
+
+위의 마크업은 아래의 DOM tree로 변환된다 
+
+![DOM tree of the example markup](https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/DNtfwOq9UaC3TrEj3D9h.png?auto=format)
