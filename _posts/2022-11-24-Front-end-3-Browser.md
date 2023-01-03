@@ -10,11 +10,9 @@ sidebar:
   nav: "docs"
 ---
 
-## :speech_balloon:브라우저는 무엇이고 어떻게 동작할까?
+## :speech_balloon: 브라우저는 무엇이고 어떻게 동작할까?
 
 ### 브라우저의 주요 기능
-
----
 
 > 웹 브라우저는 가장 널리 사용되는 소프트웨어이다.
 >
@@ -27,8 +25,6 @@ sidebar:
 - 리소스 : **<u>HTML</u>**, PDF, image ... , URI로 리소스의 위치를 결정
 
 ### 브라우저의 구조
-
----
 
 1. 유저 인터페이스 : 주소창, 뒤로 및 앞으로 버튼, 북마크 메뉴 등
 
@@ -54,8 +50,6 @@ sidebar:
 
 ### 렌더링 엔진
 
----
-
 > 브라우저마다 다른 엔진을 사용한다
 >
 > IE : Trident , Firefox : Gecko , Safari : Webkit, Chrome : Bling(Webkit)
@@ -63,8 +57,6 @@ sidebar:
 > Webkit은 Mac 및 Windows를 지원하도록 Apple에서 수정한 렌더링 엔진
 
 #### 기본 흐름
-
----
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/bPlYx9xODQH4X1KuUNpc.png?auto=format" title="" alt="렌더링 엔진 기본 흐름" data-align="center">
 
@@ -77,7 +69,5 @@ sidebar:
 4. "painting" : render tree를 순회해서 UI 백엔드를 통해 각 노드를 painting
 
 #### 기본 흐름의 예
-
----
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/S9TJhnMX1cu1vrYuQRqM.png?auto=format" title="" alt="WebKit 기본 흐름." data-align="center">
