@@ -11,7 +11,7 @@ sidebar:
 
 ---
 
-## :speech_balloon:브라우저는 무엇이고 어떻게 동작할까?
+### :speech_balloon:브라우저는 무엇이고 어떻게 동작할까?
 
 > 웹 브라우저는 가장 널리 사용되는 소프트웨어이다. 
 > 
@@ -19,13 +19,21 @@ sidebar:
 > 
 > 뒤에서는 무슨 일이 일어나는지 알아보자.  
 
-### 브라우저의 주요 기능
+#### 브라우저의 주요 기능
+
+---
+
+
 
 - 선택한 웹 리소스를 서버에 요청하고 그것을 보여주는 것 
 
 - 리소스 : **<u>HTML</u>**, PDF, image ...  ,  URI로 리소스의 위치를 결정
 
-### 브라우저의 구조
+#### 브라우저의 구조
+
+---
+
+
 
 1. 유저 인터페이스 : 주소창, 뒤로 및 앞으로 버튼, 북마크 메뉴 등
 
@@ -49,7 +57,11 @@ sidebar:
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/PgPX6ZMyKSwF6kB8zIhB.png?auto=format" title="" alt="Browser components" data-align="center">
 
-### 렌더링 엔진
+#### 렌더링 엔진
+
+---
+
+
 
 > 브라우저마다 다른 엔진을 사용한다
 > 
@@ -57,7 +69,11 @@ sidebar:
 > 
 > Webkit은 Mac 및 Windows를 지원하도록 Apple에서 수정한 렌더링 엔진
 
-#### 기본 흐름
+##### 기본 흐름
+
+---
+
+
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/bPlYx9xODQH4X1KuUNpc.png?auto=format" title="" alt="렌더링 엔진 기본 흐름" data-align="center">
 
@@ -69,6 +85,10 @@ sidebar:
 
 4. "painting" : render tree를 순회해서 UI 백엔드를 통해 각 노드를 painting
 
-#### 기본 흐름의 예
+##### 기본 흐름의 예
+
+---
+
+
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/S9TJhnMX1cu1vrYuQRqM.png?auto=format" title="" alt="WebKit 기본 흐름." data-align="center">
