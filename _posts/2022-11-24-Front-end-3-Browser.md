@@ -12,7 +12,7 @@ sidebar:
 
 ## :speech_balloon:브라우저는 무엇이고 어떻게 동작할까?
 
-#### 브라우저의 주요 기능
+### 브라우저의 주요 기능
 
 ---
 
@@ -26,7 +26,7 @@ sidebar:
 
 - 리소스 : **<u>HTML</u>**, PDF, image ... , URI로 리소스의 위치를 결정
 
-#### 브라우저의 구조
+### 브라우저의 구조
 
 ---
 
@@ -52,7 +52,7 @@ sidebar:
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/PgPX6ZMyKSwF6kB8zIhB.png?auto=format" title="" alt="Browser components" data-align="center">
 
-#### 렌더링 엔진
+### 렌더링 엔진
 
 ---
 
@@ -62,7 +62,7 @@ sidebar:
 >
 > Webkit은 Mac 및 Windows를 지원하도록 Apple에서 수정한 렌더링 엔진
 
-##### 기본 흐름
+#### 기본 흐름
 
 ---
 
@@ -76,7 +76,7 @@ sidebar:
 
 4. "painting" : render tree를 순회해서 UI 백엔드를 통해 각 노드를 painting
 
-##### 기본 흐름의 예
+#### 기본 흐름의 예
 
 ---
 
