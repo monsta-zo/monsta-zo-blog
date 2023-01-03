@@ -90,11 +90,6 @@ body {
 .page__content {
   h2 {
     padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
-  }
-
-  p {
-    line-height: 2;
   }
 
   h1,
@@ -128,6 +123,7 @@ body {
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
+    line-height: 1;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
