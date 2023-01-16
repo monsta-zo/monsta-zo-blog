@@ -14,7 +14,6 @@
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-# Site Settings
 locale: "ko-KR"
 title: "몬조노트"
 title_separator: "|"

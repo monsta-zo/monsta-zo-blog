@@ -73,8 +73,9 @@ body {
   line-height: 1;
 
   a {
-    color: #0092ca !important;
+    color: black !important;
     text-decoration: none;
+    font-size: 1.7em;
   }
 
   & + .page__meta {
@@ -97,19 +98,14 @@ body {
     font-size: 1.8em !important;
     padding: 0.5em !important;
     text-align: center;
-    border-bottom: 3px dotted #163b4a !important;
-    border-top: 3px dotted #163b4a !important;
     border-radius: 5px;
-    color: #163b4a !important;
   }
   h3 {
-    margin-top: 1em !important;
-    margin-bottom: 0 !important;
-    border-bottom: 2px solid #0092ca !important;
-    padding-bottom: 0.5em !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 1rem !important;
     font-size: 1.5em !important;
-    font-weight: 900 !important;
-    color: #0092ca;
+    font-weight: bold !important;
+    line-height: 1.5;
   }
 
   h4 {
@@ -125,16 +121,14 @@ body {
     margin-left: 1.5em !important;
   }
 
-  img {
-    margin-left: 1.5em !important;
-  }
-
   hr {
     margin: 0.8rem 0 !important;
   }
 
   blockquote {
-    margin: 1em 1em 1em 0 !important;
+    margin: 2rem 0 !important;
+    background: #f8f9fa;
+    padding: 1rem 1rem 1rem 2rem;
   }
   h1,
   h2,
@@ -161,16 +155,17 @@ body {
   p,
   li,
   dl {
-    font-size: 1em;
-  }
-
-  p {
-    margin-bottom: 0.6em !important;
+    font-size: 16px !important;
+    line-height: 1.7;
+    letter-spacing: -0.004em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   /* paragraph indents */
   p {
-    margin: 0 0 $indent-var;
+    margin: 0 0;
+    font-weight: 300 !important;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {

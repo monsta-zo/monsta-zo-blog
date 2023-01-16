@@ -111,8 +111,7 @@ blockquote {
   margin: 2em 1em 2em 0;
   padding-left: 1em;
   padding-right: 1em;
-  font-style: italic;
-  border-left: 0.25em solid $primary-color;
+  border-left: 4px solid $primary-color;
 
   cite {
     font-style: italic;
@@ -214,14 +213,13 @@ figure {
     transition: $global-transition;
   }
 
-  >a {
+  > a {
     display: block;
   }
 
   &.half {
-
-    >a,
-    >img {
+    > a,
+    > img {
       @include breakpoint($small) {
         width: calc(50% - 0.5em);
       }
@@ -233,9 +231,8 @@ figure {
   }
 
   &.third {
-
-    >a,
-    >img {
+    > a,
+    > img {
       @include breakpoint($small) {
         width: calc(33.3333% - 0.5em);
       }
