@@ -25,8 +25,6 @@ sidebar:
 > 
 > 이것들을 모아둔 **<u>전화번호부가 DNS</u>** 이다.
 
-
-
 ### DNS는 어떻게 동작할까?
 
 - DNS 프로세스에는 hostname(예: www.example.com)을 IP 주소(예:192.168.1.1)로 변환하는 과정이 포함된다
@@ -48,8 +46,6 @@ sidebar:
 > 일반적으로 DNS 조회는 캐시된 정보를 통해 더 빠르게 이루어진다. 하지만 캐시되지 않았을 때의 8단계 모두를 확인해보자. 
 > 
 > (여기서 **쿼리**라는 것은 모두 **<u>질문</u>**으로 해석하면 이해가 빠를 것이다)
-
-
 
 ![DNS query diagram](https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png)
 
