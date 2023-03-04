@@ -9,17 +9,22 @@ docs:
   - title: "Front-end"
     children:
       - title: "Internet"
-        url: "https://monsta-zo.github.io/tags/#%EC%9D%B8%ED%84%B0%EB%84%B7"
+        url: "https://monsta-zo.github.io/tags/#internet"
       - title: "Javascript"
-        url: "https://monsta-zo.github.io/tags/#Javascript"
+        url: "https://monsta-zo.github.io/tags/#javascript"
   - title: "CS"
     children:
       - title: "database"
         url: "https://monsta-zo.github.io/tags/#database"
       - title: "자료구조"
         url: "https://monsta-zo.github.io/tags/#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0"
-  - title: "Piro"
-    url: "http://localhost:4000/categories/#piro"
+  - title: "PS"
+    children:
+      - title: "Basic"
+  - title: "Project"
+    children:
+      - title: "Pirogramming 18"
+        url: "https://monsta-zo.github.io/tags/#piro"
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
