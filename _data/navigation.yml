@@ -10,6 +10,8 @@ docs:
     children:
       - title: "Internet"
         url: "https://monsta-zo.github.io/tags/#%EC%9D%B8%ED%84%B0%EB%84%B7"
+      - title: "Javascript"
+        url: "https://monsta-zo.github.io/tags/#Javascript"
   - title: "CS"
     children:
       - title: "database"
