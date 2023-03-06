@@ -14,13 +14,12 @@ docs:
         url: "https://monsta-zo.github.io/tags/#javascript"
   - title: "CS"
     children:
-      - title: "database"
+      - title: "DB"
         url: "https://monsta-zo.github.io/tags/#database"
-      - title: "자료구조"
+      - title: "DS"
         url: "https://monsta-zo.github.io/tags/#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0"
-  - title: "PS"
-    children:
-      - title: "Basic"
+      - title: "PS"
+      - title: "Algorithm"
   - title: "Project"
     children:
       - title: "Pirogramming 18"
