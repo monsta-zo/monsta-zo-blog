@@ -112,6 +112,22 @@ let {p, q} = o;
 // q -> true
 ```
 
+**일부 프로퍼티만 사용하기**
+
+일부 프로퍼티만 구조 분해 할당하여 사용할 수 있다.
+
+```js
+const person = {
+    name: 'Lee Sun-Hyoup',
+    familyName: 'Lee',
+    givenName: 'Sun-Hyoup'
+    company: 'Cobalt. Inc.',
+    address: 'Seoul',
+}
+
+const { familyName, givenName } = person;
+```
+
 **새로운 변수 이름으로 할당하기**
 
 위에서 key값을 맞춰줘야지 값을 제대로 할당 받을 수 있다고 했는데 다른 이름의 변수에 할당하고 싶다면 아래와 같이 한다.

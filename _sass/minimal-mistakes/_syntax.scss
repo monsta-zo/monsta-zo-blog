@@ -6,17 +6,17 @@ div.highlighter-rouge,
 figure.highlight {
   position: relative;
   margin-bottom: 1em;
-  background: $base00;
+  background: #e9ecf3;
   color: $base05;
   font-family: $monospace;
-  font-size: $type-size-6;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.5;
   border-radius: $border-radius;
 
   > pre,
   pre.highlight {
-    margin: 0;
-    padding: 1em;
+    margin-top: 10px;
+    padding: 1.25rem 1.5rem;
   }
 }
 
@@ -70,7 +70,7 @@ figure.highlight {
   }
   .k {
     /* Keyword */
-    color: $base0e;
+    color: #d73a49;
   }
   .l {
     /* Literal */
@@ -82,11 +82,11 @@ figure.highlight {
   }
   .o {
     /* Operator */
-    color: $base0c;
+    color: #d73a49;
   }
   .p {
     /* Punctuation */
-    color: $base05;
+    color: #263747;
   }
   .cm {
     /* Comment.Multiline */
@@ -98,7 +98,7 @@ figure.highlight {
   }
   .c1 {
     /* Comment.Single */
-    color: $base04;
+    color: #98a8b9;
   }
   .cs {
     /* Comment.Special */
@@ -137,11 +137,11 @@ figure.highlight {
   }
   .kc {
     /* Keyword.Constant */
-    color: $base0e;
+    color: #000000;
   }
   .kd {
     /* Keyword.Declaration */
-    color: $base0e;
+    color: #000000;
   }
   .kn {
     /* Keyword.Namespace */
@@ -173,11 +173,11 @@ figure.highlight {
   }
   .na {
     /* Name.Attribute */
-    color: $base0d;
+    color: #008080;
   }
   .nb {
     /* Name.Builtin */
-    color: $base05;
+    color: #0086b3;
   }
   .nc {
     /* Name.Class */
@@ -213,7 +213,7 @@ figure.highlight {
   }
   .nx {
     /* Name.Other */
-    color: $base0d;
+    color: #000000;
   }
   .py {
     /* Name.Property */
@@ -237,7 +237,7 @@ figure.highlight {
   }
   .mf {
     /* Literal.Number.Float */
-    color: $base09;
+    color: #009999;
   }
   .mh {
     /* Literal.Number.Hex */
@@ -245,7 +245,7 @@ figure.highlight {
   }
   .mi {
     /* Literal.Number.Integer */
-    color: $base09;
+    color: #005cc5;
   }
   .mo {
     /* Literal.Number.Oct */
@@ -289,11 +289,14 @@ figure.highlight {
   }
   .s1 {
     /* Literal.String.Single */
-    color: $base0b;
+    color: #d14;
   }
   .ss {
     /* Literal.String.Symbol */
     color: $base0b;
+  }
+  .dl {
+    color: #d14;
   }
   .bp {
     /* Name.Builtin.Pseudo */
@@ -318,7 +321,8 @@ figure.highlight {
 }
 
 .gist {
-  th, td {
+  th,
+  td {
     border-bottom: 0;
   }
 }

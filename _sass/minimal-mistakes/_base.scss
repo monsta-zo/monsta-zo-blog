@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: $text-color;
+  color: #263747;
   font-family: $global-font-family;
   line-height: 1.5;
 
@@ -27,15 +27,15 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 2em 0 0.5em;
+  margin: 2em 0 0.25em;
   line-height: 1.2;
   font-family: $header-font-family;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: $h-size-1;
+  margin-top: 20px;
+  font-size: 2em;
 }
 
 h2 {
@@ -108,10 +108,8 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  margin: 2em 1em 2em 0;
-  padding-left: 1em;
-  padding-right: 1em;
-  border-left: 4px solid $primary-color;
+  margin: 12px 0 0 0;
+  border-left: 8px solid #e9ecf3;
 
   cite {
     font-style: italic;
