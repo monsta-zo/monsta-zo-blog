@@ -7,7 +7,7 @@ figure.highlight {
   position: relative;
   margin-bottom: 1em;
   background: #e9ecf3;
-  color: $base05;
+  color: black;
   font-family: $monospace;
   font-size: 13px;
   line-height: 1.5;
@@ -169,11 +169,11 @@ figure.highlight {
   }
   .s {
     /* Literal.String */
-    color: $base0b;
+    color: #007936;
   }
   .na {
     /* Name.Attribute */
-    color: #008080;
+    color: #d30038;
   }
   .nb {
     /* Name.Builtin */
@@ -221,7 +221,7 @@ figure.highlight {
   }
   .nt {
     /* Name.Tag */
-    color: $base0c;
+    color: #007936;
   }
   .nv {
     /* Name.Variable */
