@@ -552,11 +552,12 @@
 
   li ul > li a {
     padding-left: 1.25rem;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   li ul li ul > li a {
     padding-left: 1.75rem;
+    font-weight: normal;
   }
 
   li ul li ul li ul > li a {
@@ -568,6 +569,6 @@
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }
