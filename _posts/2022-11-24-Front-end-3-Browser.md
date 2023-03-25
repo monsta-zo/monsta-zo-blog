@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "[Internet] Browser는 어떻게 동작할까?"
-categories: Front-end
-tag: [Front-end, Internet]
+categories: WEB 이론
+tag: [WEB 이론]
 toc: true
 toc_sticky: true
 author_profile: false

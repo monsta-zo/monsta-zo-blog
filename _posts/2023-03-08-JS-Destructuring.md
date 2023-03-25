@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[Javascript] 구조 분해 할당"
-categories: Front-end
-tag: [Javascript, Front-end]
+title: "[JavaScript] 구조 분해 할당"
+categories: JavaScript
+tag: [JavaScript]
 toc: true
 toc_sticky: true
 author_profile: false

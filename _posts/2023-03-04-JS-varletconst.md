@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[Javascript]var,let,const의 차이"
-categories: Front-end
-tag: [Javascript, Front-end]
+title: "[JavaScript] var,let,const의 차이"
+categories: JavaScript
+tag: [JavaScript]
 toc: true
 toc_sticky: true
 author_profile: false

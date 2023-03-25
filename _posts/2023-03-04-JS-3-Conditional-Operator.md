@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[Javascript] 삼항연산자"
-categories: Front-end
-tag: [Front-end, Javascript]
+title: "[JavaScript] 삼항연산자"
+categories: JavaScript
+tag: [JavaScript]
 toc: true
 toc_sticky: true
 author_profile: false

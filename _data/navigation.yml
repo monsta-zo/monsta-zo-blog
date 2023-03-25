@@ -6,24 +6,20 @@ main:
     url: /search/
 
 docs:
-  - title: "Front-end"
+  - title: "언어"
     children:
-      - title: "Internet"
-        url: "https://monsta-zo.github.io/tags/#internet"
-      - title: "Javascript"
-        url: "https://monsta-zo.github.io/tags/#javascript"
-  - title: "CS"
+      - title: "HTML"
+      - title: "JavaScript"
+  - title: "개발 지식"
     children:
-      - title: "DB"
-        url: "https://monsta-zo.github.io/tags/#database"
-      - title: "DS"
-        url: "https://monsta-zo.github.io/tags/#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0"
-      - title: "PS"
-      - title: "Algorithm"
-  - title: "Project"
+      - title: "WEB 이론"
+      - title: "DB 이론"
+      - title: "자료구조"
+      - title: "알고리즘"
+  - title: "문제 해결"
     children:
-      - title: "Pirogramming 18"
-        url: "https://monsta-zo.github.io/tags/#piro"
+      - title: "문제풀이"
+      - title: "코딩테스트"
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/

@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "[HTML] HTML 기초"
-categories: Front-end
-tag: [Front-end, HTML]
+categories: HTML
+tag: [HTML]
 toc: true
 toc_sticky: true
 author_profile: false

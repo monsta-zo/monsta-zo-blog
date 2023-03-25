@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[Javascript] indexOf() : 배열, 문자열에서 위치찾기"
-categories: Front-end
-tag: [Javascript, Front-end]
+title: "[JavaScript] indexOf() : 배열, 문자열에서 위치찾기"
+categories: JavaScript
+tag: [JavaScript]
 toc: true
 toc_sticky: true
 author_profile: false

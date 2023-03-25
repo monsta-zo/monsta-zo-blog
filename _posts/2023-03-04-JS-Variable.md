@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[Javascript]자바스크립트의 변수들"
-categories: Front-end
-tag: [Javascript, Front-end]
+title: "[Javascript] 자바스크립트의 변수들"
+categories: JavaScript
+tag: [JavaScript]
 toc: true
 toc_sticky: true
 author_profile: false

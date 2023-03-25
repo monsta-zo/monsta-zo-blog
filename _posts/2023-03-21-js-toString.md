@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[Javascript] toString() : 문자열로 바꾸기"
-categories: Front-end
-tag: [Javascript, Front-end]
+title: "[JavaScript] toString() : 문자열로 바꾸기"
+categories: JavaScript
+tag: [JavaScript]
 toc: true
 toc_sticky: true
 author_profile: false

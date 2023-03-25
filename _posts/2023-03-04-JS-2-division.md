@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[Javascript] 나누기 연산 (몫 구하기)"
-categories: Front-end
-tag: [Front-end, Javascript]
+title: "[JavaScript] 나누기 연산 (몫 구하기)"
+categories: JavaScript
+tag: [JavaScript]
 toc: true
 toc_sticky: true
 author_profile: false
