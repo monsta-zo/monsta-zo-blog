@@ -9,17 +9,25 @@ docs:
   - title: "언어"
     children:
       - title: "HTML"
+        url: "https://monsta-zo.github.io/tags/#html"
       - title: "JavaScript"
+        url: "https://monsta-zo.github.io/tags/#javascript"
   - title: "개발 지식"
     children:
       - title: "WEB 이론"
+        url: "https://monsta-zo.github.io/tags/#web-%EC%9D%B4%EB%A1%A0"
       - title: "DB 이론"
+        url: "https://monsta-zo.github.io/tags/#db-%EC%9D%B4%EB%A1%A0"
       - title: "자료구조"
+        url: "https://monsta-zo.github.io/tags/#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0"
       - title: "알고리즘"
+        url: "https://monsta-zo.github.io/tags/#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"
   - title: "문제 해결"
     children:
       - title: "문제풀이"
+        url: "https://monsta-zo.github.io/tags/#%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4"
       - title: "코딩테스트"
+        url: "https://monsta-zo.github.io/tags/#%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8"
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
