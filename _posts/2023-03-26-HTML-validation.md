@@ -1,5 +1,4 @@
 ---
-
 layout: single
 title: "[HTML] 유효성 검사"
 categories: HTML
