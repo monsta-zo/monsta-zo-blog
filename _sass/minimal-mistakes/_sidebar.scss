@@ -62,7 +62,12 @@
   }
 
   img {
-    width: 100%;
+    width: 100px;
+    margin-right: 25px;
+    @include breakpoint($large) {
+      width: 100%;
+      padding-right: 20px;
+    }
 
     &.emoji {
       width: 20px;
@@ -145,14 +150,15 @@
 }
 
 .author__content {
-  display: table-cell;
+  display: flex;
   vertical-align: top;
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
 
   @include breakpoint($large) {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -187,6 +193,8 @@
 }
 
 .author__urls-wrapper {
+  padding-left: 15px;
+  padding-top: 10px;
   position: relative;
   display: table-cell;
   vertical-align: middle;
@@ -207,6 +215,7 @@
   }
 
   @include breakpoint($large) {
+    padding: 0;
     display: block;
   }
 
