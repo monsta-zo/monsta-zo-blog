@@ -18,14 +18,14 @@ minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "
 locale: "ko-KR"
 title: "Monzo Dev"
 title_separator: "|"
-subtitle: "몬조의 개발 블로그"
-name: "몬조"
+subtitle: "Monzo의 개발 블로그"
+name: "Monzo"
 description: "프론트엔드 개발자 조준서입니다."
 url: "https://monsta-zo.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo:
+logo: ""
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs: true # true, false (default)
 words_per_minute: 200
@@ -103,7 +103,7 @@ analytics:
 
 # Site Author
 author:
-  name: "몬조"
+  name: "Monzo"
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "프론트엔드 개발자 조준서입니다."
   location: "South Korea"
