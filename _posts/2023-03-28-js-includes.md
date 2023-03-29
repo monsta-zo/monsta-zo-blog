@@ -1,5 +1,4 @@
 ---
-
 layout: single
 title: "[JavaScript] includes(), 포함 여부 확인하기"
 categories: JavaScript
@@ -33,5 +32,3 @@ arr.includes(valueTofind, fromIndex);
 `return`
 
     true 또는 false
-
-
