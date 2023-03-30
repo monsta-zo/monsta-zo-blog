@@ -1,5 +1,4 @@
 ---
-
 layout: single
 title: "[JavaScript] isInteger(), 정수인지 판별하기"
 categories: JavaScript
