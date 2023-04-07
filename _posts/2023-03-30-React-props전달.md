@@ -188,10 +188,62 @@ function Profile(props) {
 
 이렇게 하면 굳이 props를 나열할 필요 없이 한번에 보낼 수 있다
 
-## 자식 컴포넌트를 JSX로서 전달하기
+## JSX를 props로 전달하기
 
-   
+우리는 JSX 코드 자체를 props로 전달할 수도 있다. 
 
-## 
+**[Avatar.js]**
 
+```js
+import { getImageUrl } from './utils.js';
 
+export default function Avatar({ person, size }) {
+  return (
+    <img
+      className="avatar"
+      src={getImageUrl(person)}
+      alt={person.name}
+      width={size}
+      height={size}
+    />
+  );
+}
+```
+
+**[App.js]**
+
+```js
+import Avatar from './Avatar.js';
+
+function Card({ children }) {
+  return (
+    <div className="card">
+      {children}
+    </div>
+  );
+}
+
+export default function Profile() {
+  return (
+    <Card>
+      <Avatar
+        size={100}
+        person={{ 
+          name: 'Katsuko Saruhashi',
+          imageId: 'YfeOqp2'
+        }}
+      />
+    </Card>
+  );
+}
+```
+
+위의 코드를 보면 `Profile` 컴포넌트에서 `Card` 라는 자식 컴포넌트를 호출하는데 `props` 로써 특정 값을 넘겨주는 것이아닌 **JSX를 통째로 넘겨주고 있다.** 이 JSX를 자식 컴포넌트에서는 `children` 으로 받았고 그 값을 자식 컴포넌트 내부에서 그대로 사용하고 있다. 그리고 <u>이 JSX는 다른 컴포넌트 또한 가질 수 있다.</u> 
+
+<br>
+
+우리는 특정 컴포넌트에 대해서 props의 값이 다를 뿐 아니라 JSX 코드의 형태가 다를 경우 이런 식으로 **JSX자체를 children으로써 넘겨줄 수 있는 것이다.**
+
+## 변화하는 props 값
+
+**부모로부터 받는 props값이 변경되면 그 값은 컴포넌트에 반영된다**. 즉, 컴포넌트를 생성할 때 뿐만 아니라 생성된 후에 props값이 변경되더라도 생성된 컴포넌트에서 해당 값은 변경된 값으로 언제든 바뀔 수 있다. 하지만 이 개념은 props 자체가 변하는 것이 아닌, 해당 컴포넌트를 생성하는 부모가 props로써 다른 값을 넘겨주는 것이다. 이러한 기능을 사용하기 위해선 `state` 를 배워야한다. ( 추후에 배울 예정 )
