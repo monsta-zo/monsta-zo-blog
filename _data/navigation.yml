@@ -14,9 +14,9 @@ docs:
         url: "https://monsta-zo.github.io/tags/#javascript"
   - title: "개발 지식"
     children:
-      - title: "WEB 이론"
+      - title: "WEB이론"
         url: "https://monsta-zo.github.io/tags/#web-%EC%9D%B4%EB%A1%A0"
-      - title: "DB 이론"
+      - title: "DB이론"
         url: "https://monsta-zo.github.io/tags/#db-%EC%9D%B4%EB%A1%A0"
       - title: "자료구조"
         url: "https://monsta-zo.github.io/tags/#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0"
