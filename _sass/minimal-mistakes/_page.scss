@@ -142,6 +142,15 @@ body {
     }
   }
 
+  em {
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 600;
+    border-left: 4px solid black;
+    padding-left: 8px;
+    border-radius: 3px;
+  }
+
   p,
   dl {
     font-size: 15px !important;
