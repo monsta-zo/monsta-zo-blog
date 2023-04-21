@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Internet] Browser는 어떻게 동작할까?"
+title: "[Internet] 브라우저는 어떻게 동작할까?"
 categories: WEB
 tag: [WEB]
 toc: true
@@ -10,9 +10,7 @@ sidebar:
   nav: "docs"
 ---
 
-## :speech_balloon: 브라우저는 무엇이고 어떻게 동작할까?
-
-### 브라우저의 주요 기능
+# 1. 브라우저의 기능
 
 > 웹 브라우저는 가장 널리 사용되는 소프트웨어이다.
 >
@@ -24,9 +22,14 @@ sidebar:
 
 - 리소스 : **<u>HTML</u>**, PDF, image ... , URI로 리소스의 위치를 결정
 
-### 브라우저의 구조
+# 2. 브라우저의 구조
 
-1. 유저 인터페이스 : 주소창, 뒤로 및 앞으로 버튼, 북마크 메뉴 등
+1. 유저 인터페이스
+
+   - 창 : 브라우저의 메뉴들을 포함하는 전체 화면
+   - 탭 : 페이지를 구분하는 단위, 창 하나에는 여러 탭이 있을 수 있다
+   - 주소창 : 주소를 입력할 수 있는 부분
+   - 뷰포트 : 실제로 웹페이지가 렌더링되어 지는 부분
 
 2. 브라우저 엔진 : UI 와 렌더링 엔진 간의 작업을 marshal ( 정렬 )
 
@@ -48,15 +51,19 @@ sidebar:
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/PgPX6ZMyKSwF6kB8zIhB.png?auto=format" title="" alt="Browser components" data-align="center">
 
-### 렌더링 엔진
+*렌더링 엔진*
 
-> 브라우저마다 다른 엔진을 사용한다
->
-> IE : Trident , Firefox : Gecko , Safari : Webkit, Chrome : Bling(Webkit)
->
-> Webkit은 Mac 및 Windows를 지원하도록 Apple에서 수정한 렌더링 엔진
+브라우저마다 다른 엔진을 사용한다
 
-### 주요 흐름
+IE : Trident , Firefox : Gecko , Safari : Webkit, Chrome : Bling(Webkit)
+
+Webkit은 Mac 및 Windows를 지원하도록 Apple에서 수정한 렌더링 엔진
+
+*크로스 브라우징*
+
+크로스 브라우징(Cross Browsing)이란 조금은 다르게 구동되는 여러 브라우저에서, 동일한 사용자 경험(같은 화면, 같은 동작 등)을 줄 수 있도록 제작하는 기술, 방법
+
+# 3. 주요 흐름
 
 <img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/bPlYx9xODQH4X1KuUNpc.png?auto=format" title="" alt="렌더링 엔진 기본 흐름" data-align="center">
 
@@ -68,15 +75,15 @@ sidebar:
 
 4. "painting" : render tree를 순회해서 UI 백엔드를 통해 각 노드를 painting
 
-#### 주요 흐름의 예<img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/S9TJhnMX1cu1vrYuQRqM.png?auto=format" title="" alt="WebKit 기본 흐름." data-align="center">
+*주요 흐름의 예*<img src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/S9TJhnMX1cu1vrYuQRqM.png?auto=format" title="" alt="WebKit 기본 흐름." data-align="center">
 
-### 1. HTML Parser
+## 1. HTML Parser
 
 - HTML 마크업을 파스 트리로 파싱하는 것
 
 > HTML은 DTD 형식이다, DTD는 문맥자유문법이 아니기 때문에 일반적인 파서들로는 HTML을 파싱할 수 없다.
 
-#### DOM(Document Object Model)
+*DOM(Document Object Model)*
 
 - HTML Parser의 결과물은 DOM tree
 
@@ -102,7 +109,7 @@ sidebar:
 
 > 위에서 말한것 처럼, HTML은 일반적인 파서로 파싱할 수 없으므로 브라우저는 HTML을 위한 파서를 만든다.
 
-#### HTML Parser의 두가지 단계
+*HTML Parser의 두가지 단계*
 
 1. 토큰화
 
@@ -122,7 +129,7 @@ sidebar:
 >
 > HTML 페이지에서는 'Invalid Syntax' 에러가 발생하지 않는다. 브라우저는 구문 오류를 허용하고 스스로 수정하며 로드한다.
 
-### 2. CSS Parsing
+## 2. CSS Parsing
 
 - CSS 는 문백 자유 문법이라서 일반적인 파서를 통해 구문 분석 가능하다
 
@@ -155,7 +162,7 @@ sidebar:
 
   위와 같은 규칙을 통해 CSS를 분석한다
 
-### 3. Render tree 구성
+## 3. Render tree 구성
 
 1. DOM tree가 구성되는 동안 브라우저는 Render tree를 구성한다
 
@@ -173,7 +180,7 @@ sidebar:
 
 이 규칙에 따라 style들을 DOM tree로 부터 만들어진 Render tree에 적용한다
 
-### 4. Layout
+## 4. Layout
 
 - 렌더 트리가 만들어져도 위치나 크기 등을 가지지 않는다. 이것을 계산하는 것을 '**layout'** 또는 **'reflow'** 라고 한다.
 
@@ -196,16 +203,12 @@ sidebar:
 > **레이아웃의 단계**
 >
 > 1. 부모 렌더러는 자신의 넓이를 결정한다
->
-> 2. 자식 렌더러를 배친한다 (x, y 설정)
->
+>2. 자식 렌더러를 배친한다 (x, y 설정)
 > 3. 필요한 경우 자식의 레이아웃을 실행한다
->
-> 4. 부모는 자식의 높이와 마진, 패딩 등을 사용하여 자신의 높이를 설정한다
->
+>4. 부모는 자식의 높이와 마진, 패딩 등을 사용하여 자신의 높이를 설정한다
 > 5. Dirty bit를 false로 설정한다
 
-#### 5. Painting
+## 5. Painting
 
 - 렌더트리가 순회되고 렌더러의 'paint()' 메서드를 호출한다
 
