@@ -71,6 +71,7 @@ body {
 .page__title {
   margin-top: 0;
   line-height: 1;
+  border-bottom: 0;
 
   a {
     color: #263747 !important;
@@ -90,8 +91,11 @@ body {
 
 .page__content {
   h2 {
-    margin-top: 3.3rem !important;
-    font-size: 25px !important;
+    margin-top: 24px !important;
+    margin-bottom: 16px !important;
+    font-size: 1.5em !important;
+    padding-bottom: 0.3em !important;
+    border-bottom: 1px solid #88929d !important;
   }
   h3 {
     margin-top: 2.5rem !important;
@@ -165,7 +169,7 @@ body {
   }
 
   li {
-    font-size: 13px !important;
+    font-size: 16px !important;
     line-height: 1.7;
     letter-spacing: -0.004em;
     word-break: keep-all;

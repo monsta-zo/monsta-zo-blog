@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "cd49942769598635",
+    "type": "split",
+    "children": [
+      {
+        "id": "65d1ba19e341cc94",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0d42851f0bc07a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2023-03-21-js-입출력.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6380554f2d85de38",
+    "type": "split",
+    "children": [
+      {
+        "id": "be094aa2877f186e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd0f6dab4a403e28",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "22a31ba51a4ee48e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "443c0a28f6ded81e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "c92bb3e944055bac",
+    "type": "split",
+    "children": [
+      {
+        "id": "a67876f8f6211ffd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d16bb296ebc2fcd6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2023-03-21-js-입출력.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f249600c9dc88383",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2023-03-21-js-입출력.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6d2463c7fcef550",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8ffcb445252e3415",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2023-03-21-js-입출력.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "bd0f6dab4a403e28",
+  "lastOpenFiles": [
+    "_posts/2023-03-21-js-입출력.md",
+    "_posts/2022-11-24-cs-db-05.md",
+    "_site/db/cs-db-05/index.html",
+    "_site/db/cs-db-05",
+    "_site/cs-db-05/index.html",
+    "_site/cs-db-05"
+  ]
+}
