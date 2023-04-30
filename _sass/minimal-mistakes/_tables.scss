@@ -7,7 +7,7 @@ table {
   margin-bottom: 1em;
   width: 100%;
   font-family: $global-font-family;
-  font-size: $type-size-6;
+  font-size: 0.9em;
   border-collapse: collapse;
   overflow-x: auto;
 
@@ -17,23 +17,27 @@ table {
 }
 
 thead {
-  background-color: $border-color;
-  border-bottom: 2px solid mix(#000, $border-color, 25%);
+  border: 1px solid mix(#000, $border-color, 25%);
 }
 
 th {
-  padding: 0.5em;
+  padding: 6px 13px;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
+  border: 1px solid mix(#000, $border-color, 25%);
 }
 
 td {
-  padding: 0.5em;
-  border-bottom: 1px solid mix(#000, $border-color, 25%);
+  padding: 6px 13px;
+  border: 1px solid mix(#000, $border-color, 25%);
 }
 
 tr,
 td,
 th {
   vertical-align: middle;
+}
+
+tr:nth-child(2n) {
+  background-color: #e7ecf0;
 }
