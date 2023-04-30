@@ -7,8 +7,9 @@ toc: true
 toc_sticky: true
 author_profile: false
 sidebar:
- nav: "docs"
-
+  nav: "docs"
+header:
+  teaser: /assets/images/javascript.png
 ---
 
 ### 1. var
@@ -32,13 +33,12 @@ var varname = value;
 선언된 변수들은 선언된 범위안에서 만들어진다. 선언되지 않은 변수들은 (var 없이 선언) 전역변수로 여겨진다
 
 ```js
-function x(){
-    y = 1; // strict 모드에서는 ReferenceError
-    var z = 2;
+function x() {
+  y = 1; // strict 모드에서는 ReferenceError
+  var z = 2;
 }
 
 x();
-
 
 console.log(y); // var없이 선언되었기 때문에 전역변수로 여겨지고 "1"을 출력
 console.log(z); // x함수 안에서 선언되었기 때문에 ReferenceError
@@ -48,7 +48,7 @@ console.log(z); // x함수 안에서 선언되었기 때문에 ReferenceError
 
 ### 2. let
 
-`let` 선언은 블록 스코프의 범위를 가지는 지역 변수를 선언하며, 선언과 동시에 임의의 값으로 초기화할 수 있다. 
+`let` 선언은 블록 스코프의 범위를 가지는 지역 변수를 선언하며, 선언과 동시에 임의의 값으로 초기화할 수 있다.
 
 ```js
 let name = value;
@@ -58,7 +58,7 @@ let name = value;
 
 #### let 선언의 특징
 
-블록의 범위에 상관없이 함수 또는 전역의 범위를 가지는 `var`선언과 달리 `let` 선언은 블록의 범위를 가진다. 
+블록의 범위에 상관없이 함수 또는 전역의 범위를 가지는 `var`선언과 달리 `let` 선언은 블록의 범위를 가진다.
 
 ```js
 function varTest() {
@@ -73,7 +73,7 @@ function varTest() {
 function letTest() {
   let x = 1;
   {
-    let x = 2; // block의 범위를 가지기 때문에 block 밖의 x와 다른 변수이다. 
+    let x = 2; // block의 범위를 가지기 때문에 block 밖의 x와 다른 변수이다.
     console.log(x); // 2
   }
   console.log(x); // 1
@@ -186,10 +186,9 @@ MY_FAV = 20; // 상수로의 재할당이기 때문에 TypeError 발생
 
 const MY_FAV = 20; // 재선언 불가하기 때문에 Syntax Error 발생
 
-
-var MY_FAV =20;
+var MY_FAV = 20;
 let MY_FAV = 20;
-// 다른 변수들과 이름을 공유할 수 없다. 
+// 다른 변수들과 이름을 공유할 수 없다.
 ```
 
 <br>
@@ -205,11 +204,11 @@ const FOO; // Syntax Error
 상수로 객체나 배열을 선언할 경우 그 자체를 재할당 할 순 없지만, 프로퍼티나 요소들은 변경할 수 있다.
 
 ```js
-const MY_OBJECT = {key: "value"};
-MY_OBJECT = {OTHER_KEY: "value"};
+const MY_OBJECT = { key: "value" };
+MY_OBJECT = { OTHER_KEY: "value" };
 // "Assignment to constant variable" 에러 발생
 
-MY_OBJECT.key = "otherValue"; 
+MY_OBJECT.key = "otherValue";
 // 객체의 프로퍼티는 수정가능하다.
 ```
 
@@ -228,21 +227,21 @@ MY_ARRAY.push("A"); // 배열 상수의 요소는 수정 가능하
 
 자바스크립트에서 변수를 선언할 수 있는 방법은 `var`, `let`, `const` 3가지이다. 이 세가지 선언에는 어떤 차이점이 있고 언제 사용하는지 알아보자.
 
-| var                           | let                    | const                   |
-| ----------------------------- | ---------------------- | ----------------------- |
-| 재선언 O                         | 재선언 X                  | 재선언 X                   |
-| 재할당 O                         | 재할당 O                  | 재할당 X                   |
-| 전역 또는 함수 범위                   | 블록 범위                  | 블록 범위                   |
+| var                                                  | let                                   | const                                  |
+| ---------------------------------------------------- | ------------------------------------- | -------------------------------------- |
+| 재선언 O                                             | 재선언 X                              | 재선언 X                               |
+| 재할당 O                                             | 재할당 O                              | 재할당 X                               |
+| 전역 또는 함수 범위                                  | 블록 범위                             | 블록 범위                              |
 | 범위의 맨위에 호이스팅 가능하므로 어디서든 사용 가능 | 사용전에 초기화 되어야함 (호이스팅 X) | 사용전에 초기화 되어야 함 (호이스팅 X) |
-| 어디서든 재선언 O                    | 블록안에서만 재선언 O           | 재선언 X                   |
+| 어디서든 재선언 O                                    | 블록안에서만 재선언 O                 | 재선언 X                               |
 
 #### var 선언
 
-변수의 재선언이 가능하다. 이는 유연한 변수 선언으로 간단한 테스트에는 편리할 수 있겠지만, 코드량이 많아진다면 어디에서 어떻게 사용될지 파악하기 힘들뿐더러 값이 바뀔 우려도 있다. 
+변수의 재선언이 가능하다. 이는 유연한 변수 선언으로 간단한 테스트에는 편리할 수 있겠지만, 코드량이 많아진다면 어디에서 어떻게 사용될지 파악하기 힘들뿐더러 값이 바뀔 우려도 있다.
 
 <br>
 
-그래서 ES6 이후 , 이를 보완하기 위해 추가 된 변수 선언 방식이 `let`과 `const`이다. 
+그래서 ES6 이후 , 이를 보완하기 위해 추가 된 변수 선언 방식이 `let`과 `const`이다.
 
 <br>
 
@@ -254,7 +253,7 @@ MY_ARRAY.push("A"); // 배열 상수의 요소는 수정 가능하
 
 #### const 선언
 
-재할당이 불가능하기 때문에 `let`과 달리 상수로 선언하고 싶을 때 `const`를 사용한다. 
+재할당이 불가능하기 때문에 `let`과 달리 상수로 선언하고 싶을 때 `const`를 사용한다.
 
 <br>
 

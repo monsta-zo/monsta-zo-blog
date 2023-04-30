@@ -7,8 +7,9 @@ toc: true
 toc_sticky: true
 author_profile: false
 sidebar:
- nav: "docs"
-
+  nav: "docs"
+header:
+  teaser: /assets/images/javascript.png
 ---
 
 # Array.prototype.includes()
@@ -19,16 +20,16 @@ sidebar:
 arr.includes(valueTofind, fromIndex);
 ```
 
-`valueToFind` 
+`valueToFind`
 
-    찾을 요소이다. 대소문자를 구분한다.
+찾을 요소이다. 대소문자를 구분한다.
 
 `fromIndex` (optional)
 
-    검색을 시작할 인덱스이다. 
+검색을 시작할 인덱스이다.
 
 <br>
 
 `return`
 
-    true 또는 false
+true 또는 false

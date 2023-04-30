@@ -2,7 +2,21 @@
 {% assign author = site.data.authors[author] | default: author %}
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
+  <div class="avatar_content">
+  
 
+  <div class="author__content">
+    <div class="author__custom"><h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url"><p>안녕하세요!</p><p>프론트엔드 개발자</p><p><strong>조준서</strong>입니다.</p></a>
+    </h3>
+    {% if author.bio %}
+      <div class="author__bio p-note" itemprop="description">
+        <p>공부한 내용을</p>
+        <p>이곳에 정리하고 있습니다.</p>
+      </div>
+    {% endif %}</div>
+    
+  </div>
   {% if author.avatar %}
     <div class="author__avatar">
       <a href="{{ author.home | default: '/' | absolute_url }}">
@@ -10,18 +24,7 @@
       </a>
     </div>
   {% endif %}
-
-  <div class="author__content">
-    <div class="author__custom"><h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ author.name }}</a>
-    </h3>
-    {% if author.bio %}
-      <div class="author__bio p-note" itemprop="description">
-        {{ author.bio | markdownify }}
-      </div>
-    {% endif %}</div>
-    
-  </div>
+</div>
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>

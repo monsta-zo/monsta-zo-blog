@@ -136,10 +136,12 @@
     display: block;
     width: auto;
     height: auto;
+    margin-top: 40px;
+    margin-left: 20px;
   }
 
   img {
-    max-width: 110px;
+    max-width: 300px;
     border-radius: 50%;
 
     @include breakpoint($large) {
@@ -149,20 +151,27 @@
   }
 }
 
+.avatar_content {
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+
 .author__content {
   display: flex;
+  width: 50%;
   vertical-align: top;
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
 
-  @include breakpoint($large) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
+  // @include breakpoint($large) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: 100%;
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
 
   a {
     color: inherit;
@@ -175,8 +184,17 @@
 
   @include breakpoint($large) {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
+}
+
+.author__name p {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.author__name strong {
+  color: #7b57b2;
 }
 .sidebar .author__name {
   font-family: $sans-serif;
@@ -190,6 +208,10 @@
     margin-top: 10px;
     margin-bottom: 20px;
   }
+}
+
+.author__bio p {
+  margin: 10px;
 }
 
 .author__urls-wrapper {
@@ -265,9 +287,9 @@
   }
 
   @include breakpoint($large) {
-    display: block;
+    display: flex;
     position: relative;
-    margin: 0;
+    margin: 20px 0 0 20px;
     padding: 0;
     border: 0;
     background: transparent;
@@ -315,6 +337,7 @@
 
   li {
     white-space: nowrap;
+    margin-right: 20px;
   }
 
   a {

@@ -24,10 +24,10 @@ description: "프론트엔드 개발자 조준서입니다."
 url: "https://monsta-zo.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser: "/assets/images/monsta.png"
+teaser: "/assets/images/monstathumb.png"
 logo: "/assets/images/monsta.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs: true # true, false (default)
+breadcrumbs: false # true, false (default)
 words_per_minute: 200
 comments:
   provider: "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -105,7 +105,7 @@ analytics:
 author:
   name: "Monzo"
   avatar: "/assets/images/logo.jpeg"
-  bio: "프론트엔드 개발자 조준서입니다."
+  bio: "안녕하세요! 프론트엔드 개발자 조준서입니다."
   location: "South Korea"
   email:
   links:

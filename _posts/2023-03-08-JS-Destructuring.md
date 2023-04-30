@@ -7,27 +7,28 @@ toc: true
 toc_sticky: true
 author_profile: false
 sidebar:
- nav: "docs"
-
+  nav: "docs"
+header:
+  teaser: /assets/images/javascript.png
 ---
 
 ### 구조 분해 할당
 
-**구조 분해 할당** ( destructuring assignment ) 는 **배열이나 객체의 속성을 해체**하여 그 값을 **개별 변수**에 담을 수 있게 하는 자바스크립트의 표현식이다. 
+**구조 분해 할당** ( destructuring assignment ) 는 **배열이나 객체의 속성을 해체**하여 그 값을 **개별 변수**에 담을 수 있게 하는 자바스크립트의 표현식이다.
 
 ### 1. 설명
 
 객체 및 배열 리터럴 표현식을 사용하면 쉽게 데이터 뭉치를 만들 수 있다.
 
 ```js
-let x = [1,2,3,4,5];
+let x = [1, 2, 3, 4, 5];
 ```
 
 구조 분해 할당의 구문은 위와 비슷하지만, 대신 할당문 좌변에서 원래 변수의 어떤 값을 분해해 할당할지 정의합니다.
 
 ```js
-var x = [1,2,3,4,5];
-var [y,z] = x;
+var x = [1, 2, 3, 4, 5];
+var [y, z] = x;
 console.log(y); // 1
 console.log(z); // 2
 ```
@@ -50,7 +51,7 @@ console.log(green); // "three"
 ```js
 let a, b;
 
-[a=5, b=7] = [1];
+[a = 5, b = 7] = [1];
 console.log(a); // 1
 console.log(b); // 7
 ```
@@ -60,7 +61,7 @@ console.log(b); // 7
 ```js
 let a = 1;
 let b = 3;
-[a,b] = [b,a];  // 3 1
+[a, b] = [b, a]; // 3 1
 ```
 
 **함수가 반환한 배열 분석**
@@ -69,7 +70,7 @@ let b = 3;
 
 ```js
 function f() {
-    return [1,2];
+  return [1, 2];
 }
 
 let a, b;
@@ -82,10 +83,10 @@ let a, b;
 
 ```js
 function f() {
-    return [1,2,3];
+  return [1, 2, 3];
 }
 
-var [a, ,b] = f(); // 1 3
+var [a, , b] = f(); // 1 3
 ```
 
 **변수에 배열의 나머지를 할당하기**
@@ -93,7 +94,7 @@ var [a, ,b] = f(); // 1 3
 나머지 구문을 이요해 분해하고 남은 부분을 하나의 변수에 담을 수 있다.
 
 ```js
-let [a, ...b] = [1,2,3];
+let [a, ...b] = [1, 2, 3];
 // a -> 1
 // b -> [2,3]
 ```
@@ -105,8 +106,8 @@ let [a, ...b] = [1,2,3];
 객체의 프로퍼티를 가져와서 구조 분해할 수 있다. 여기서 중요한 점은 <mark>구조 분해시 key 값을 변수명과 맞춰줘야지만 값을 제대로 할당한다. </mark>
 
 ```js
-let o = {p: 42, q: true};
-let {p, q} = o;
+let o = { p: 42, q: true };
+let { p, q } = o;
 
 // p -> 42
 // q -> true
@@ -133,9 +134,9 @@ const { familyName, givenName } = person;
 위에서 key값을 맞춰줘야지 값을 제대로 할당 받을 수 있다고 했는데 다른 이름의 변수에 할당하고 싶다면 아래와 같이 한다.
 
 ```js
-let o = {p: 42, q: true};
+let o = { p: 42, q: true };
 
-let {p: foo, q: bar} = o;
+let { p: foo, q: bar } = o;
 
 // foo -> 42
 // bar -> true
@@ -144,7 +145,7 @@ let {p: foo, q: bar} = o;
 **기본값 사용**
 
 ```js
-let {a = 10, b = 5} = {a: 3};
+let { a = 10, b = 5 } = { a: 3 };
 
 // a -> 3
 // b -> 5
@@ -154,28 +155,31 @@ let {a = 10, b = 5} = {a: 3};
 
 ```js
 let metadata = {
-    title: "Scratchpad",
-    translations: [
-       {
-        locale: "de",
-        localization_tags: [ ],
-        last_edit: "2014-04-14T08:43:37",
-        url: "/de/docs/Tools/Scratchpad",
-        title: "JavaScript-Umgebung"
-       }
-    ],
-    url: "/en-US/docs/Tools/Scratchpad"
+  title: "Scratchpad",
+  translations: [
+    {
+      locale: "de",
+      localization_tags: [],
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
+  ],
+  url: "/en-US/docs/Tools/Scratchpad",
 };
 
-let { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
+let {
+  title: englishTitle,
+  translations: [{ title: localeTitle }],
+} = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 **for of 반복문과 구조 분해**
 
-객체의 배열이 있을 때 각 객체에 for문으로 접근해서 구조 분해 할당 받을 수 있다. 
+객체의 배열이 있을 때 각 객체에 for문으로 접근해서 구조 분해 할당 받을 수 있다.
 
 ```js
 let people = [
@@ -184,22 +188,25 @@ let people = [
     family: {
       mother: "Jane Smith",
       father: "Harry Smith",
-      sister: "Samantha Smith"
+      sister: "Samantha Smith",
     },
-    age: 35
+    age: 35,
   },
   {
     name: "Tom Jones",
     family: {
       mother: "Norah Jones",
       father: "Richard Jones",
-      brother: "Howard Jones"
+      brother: "Howard Jones",
     },
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
-for (let {name: n, family: { father: f } } of people) {
+for (let {
+  name: n,
+  family: { father: f },
+} of people) {
   console.log("Name: " + n + ", Father: " + f);
 }
 

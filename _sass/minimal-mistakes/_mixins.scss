@@ -43,6 +43,8 @@
 
 @mixin clearfix {
   clear: both;
+  display: flex;
+  flex-direction: column;
 
   &::after {
     clear: both;

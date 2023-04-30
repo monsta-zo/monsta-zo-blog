@@ -6,8 +6,6 @@
   @include clearfix;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   max-width: 100%;
@@ -17,6 +15,10 @@
   @include breakpoint($x-large) {
     max-width: $max-width;
   }
+}
+
+#main > div:first-child {
+  padding-top: 60px;
 }
 
 body {
@@ -35,6 +37,9 @@ body {
   flex: 1 0 auto;
 }
 
+.initial-content {
+  background-color: #f7f9fb;
+}
 .page {
   @include breakpoint($large) {
     float: right;
@@ -69,6 +74,7 @@ body {
 }
 
 .page__title {
+  color: #2d3748;
   margin-top: 0;
   line-height: 1;
   border-bottom: 0;
@@ -436,6 +442,16 @@ body {
   }
 }
 
+.results__found {
+  width: 100%;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .taxonomy__title {
   margin-bottom: 0.5em;
   color: $muted-text-color;
@@ -443,6 +459,13 @@ body {
 
 .taxonomy__count {
   color: $muted-text-color;
+}
+
+.taxonomy__index li {
+  background-color: #e2e8f0;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 5px;
 }
 
 .taxonomy__index {
@@ -455,7 +478,7 @@ body {
   list-style: none;
 
   @include breakpoint($large) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   a {
@@ -466,17 +489,17 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    color: inherit;
+    color: #4a5568;
     text-decoration: none;
-    border-bottom: 1px solid $border-color;
   }
 }
 
 .back-to-top {
   display: block;
   clear: both;
-  color: $muted-text-color;
-  font-size: 0.6em;
+  color: #2d3748;
+  font-size: 1.4em;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: right;
   text-decoration: none;

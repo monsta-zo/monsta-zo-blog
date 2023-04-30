@@ -7,8 +7,9 @@ toc: true
 toc_sticky: true
 author_profile: false
 sidebar:
- nav: "docs"
-
+  nav: "docs"
+header:
+  teaser: /assets/images/javascript.png
 ---
 
 # Number.isInteger()
@@ -21,12 +22,12 @@ Number.isInteger(value);
 
 `value`
 
-    정수인지 확인할 수
+정수인지 확인할 수
 
 <br>
 
 `반환값`
 
-    정수라면 `true`, 아니면 `false`
+정수라면 `true`, 아니면 `false`
 
-# 
+#

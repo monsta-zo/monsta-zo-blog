@@ -3,18 +3,16 @@
    ========================================================================== */
 
 .archive {
-  margin-top: 1em;
-  margin-bottom: 2em;
+  padding-bottom: 3em;
 
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
+    width: 100%;
+    background-color: rgb(247, 249, 251);
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    width: 100%;
   }
 }
 .thumbnail-container {
@@ -28,6 +26,7 @@
 }
 
 .entries-list {
+  justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
   background-color: #f7f9fb;
@@ -35,11 +34,15 @@
 
 .list__item {
   background-color: white;
-  border: 2px solid lightgray;
+  box-shadow: 1px 1px 3px lightgray;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
-  width: 45%;
+  width: 31%;
+}
+
+.list__item:hover {
+  box-shadow: 1px 1px 15px lightgray;
 }
 
 .archive__item {
@@ -56,11 +59,10 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0.5em;
+  margin: 1.414em 0 0.5em 1em;
   padding-bottom: 0.5em;
-  font-size: $type-size-5;
-  color: $muted-text-color;
-  border-bottom: 1px solid $border-color;
+  font-size: 1.5em;
+  color: #2d3748;
 
   + .list__item .archive__item-title {
     margin-top: 0.5em;
