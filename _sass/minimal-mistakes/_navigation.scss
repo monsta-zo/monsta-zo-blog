@@ -518,7 +518,7 @@
   .nav__title {
     color: #fff;
     font-size: $type-size-6;
-    background: $primary-color;
+    background: #7b57b2;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -527,6 +527,15 @@
   .active a {
     @include yiq-contrasted($active-color);
   }
+}
+
+.toc .active a {
+  background-color: white;
+  color: #7b57b2;
+}
+
+.toc:hover .toc__menu {
+  display: block;
 }
 
 .toc__menu {
@@ -538,18 +547,18 @@
 
   @include breakpoint($large) {
     font-size: $type-size-7;
+    display: none;
   }
 
   a {
     display: block;
     padding: 0.25rem 0.75rem;
-    color: $muted-text-color;
+    color: #34495e;
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 1px solid $border-color;
 
     &:hover {
-      color: $text-color;
+      color: #7b57b2;
     }
   }
 

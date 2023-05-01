@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #263747;
+  color: #4a5568;
   font-family: $global-font-family;
   line-height: 1.5;
 
@@ -27,21 +27,20 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 2em 0 0.25em;
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: 600;
 }
 
 h1 {
-  padding-bottom: 0.3em;
-  font-size: 2em;
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 30px;
   margin-top: 10px;
-  margin-bottom: 16px;
-  border-bottom: 2px solid #333333;
 }
 
 h2 {
+  margin: 20px 0;
   font-size: $h-size-2;
 }
 
@@ -112,11 +111,15 @@ abbr[data-original-title] {
   border-bottom: 1px dotted $text-color;
 }
 
+strong {
+  color: #7b57b2;
+}
+
 /* blockquotes */
 
 blockquote {
   margin: 12px 0 0 0;
-  border-left: 8px solid #e9ecf3;
+  border-left: 8px solid #b7b7b773;
 
   cite {
     font-style: italic;
