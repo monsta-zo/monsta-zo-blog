@@ -42,10 +42,16 @@ body {
 }
 
 .page__content {
+  margin: 0 10px;
   background-color: white;
   border-radius: 20px;
-  padding: 60px;
+  padding: 20px;
+
+  @include breakpoint($medium) {
+    padding: 60px;
+  }
 }
+
 .page {
   margin: 0 auto;
   @include breakpoint($large) {
@@ -68,6 +74,7 @@ body {
     margin-right: 0;
     width: 100%;
     clear: both;
+    padding: 0 15px;
 
     .page__content,
     .page__meta,
@@ -80,6 +87,9 @@ body {
       clear: both;
     }
   }
+}
+.page__meta {
+  margin-left: 15px;
 }
 
 .page__title {
