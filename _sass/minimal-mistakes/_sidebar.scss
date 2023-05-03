@@ -169,7 +169,6 @@
 
 .author__content {
   display: flex;
-  width: 50%;
   vertical-align: top;
   padding-left: 15px;
   padding-right: 25px;
@@ -284,7 +283,8 @@
 }
 
 .author__urls {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   list-style-type: none;
   cursor: default;
 
@@ -292,7 +292,8 @@
     display: block;
   }
 
-  @include breakpoint($large) {
+  @include breakpoint($medium) {
+    display: flex;
     position: relative;
     margin: 20px 0 0 20px;
     padding: 0;
