@@ -72,7 +72,12 @@ p {
 u,
 ins {
   text-decoration: none;
-  border-bottom: 1px solid $text-color;
+  text-decoration-line: underline;
+  text-underline-position: under;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3.4px;
+  text-decoration-color: #6bdeff;
+  // border-bottom: 1px solid $text-color;
 
   a {
     color: inherit;
