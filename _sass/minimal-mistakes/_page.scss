@@ -39,6 +39,11 @@ body {
 
 .initial-content {
   background-color: #f7f9fb;
+  font-size: 13px;
+
+  @include breakpoint($small) {
+    font-size: 16px;
+  }
 }
 
 .page__content {
@@ -93,7 +98,7 @@ body {
 }
 
 .page__title {
-  font-size: 46px;
+  font-size: 30px;
   color: #2d3748;
   margin-top: 0;
   line-height: 1;
@@ -106,6 +111,10 @@ body {
 
   & + .page__meta {
     margin-top: -0.5em;
+  }
+
+  @include breakpoint($small) {
+    font-size: 46px;
   }
 }
 
@@ -186,10 +195,14 @@ body {
   p,
   dl {
     font-size: 1.1em;
-    line-height: 36px;
+    line-height: 32px;
     letter-spacing: -0.004em;
     word-break: keep-all;
     overflow-wrap: break-word;
+
+    @include breakpoint(small) {
+      line-height: 36px;
+    }
   }
 
   blockquote p {
@@ -197,11 +210,15 @@ body {
   }
 
   li {
-    font-size: 16px !important;
+    font-size: 13px !important;
     line-height: 1.7;
     letter-spacing: -0.004em;
     word-break: keep-all;
     overflow-wrap: break-word;
+
+    @include breakpoint($small) {
+      font-size: 16px !important;
+    }
   }
 
   /* paragraph indents */
