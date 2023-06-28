@@ -8,7 +8,8 @@ toc_sticky: true
 author_profile: false
 sidebar:
  nav: "docs"
-
+header:
+  teaser: /assets/images/react.png
 ---
 
 # props(프로퍼티)
