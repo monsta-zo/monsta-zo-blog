@@ -135,7 +135,7 @@ export default function Profile() {
           name: 'Katsuko Saruhashi',
           imageId: 'YfeOqp2'
         }}
-      />
+      /> 
     </Card>
   );
 }
