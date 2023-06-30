@@ -1,5 +1,4 @@
 ---
-
 layout: single
 title: "[React] 이벤트 "
 categories: React
@@ -127,5 +126,3 @@ function PlayButton({ movieName }) {
 `<form>`의 `submit` 이벤트에 페이지가 리로드되는 것과 같이 브라우저에는 특정 이벤트에 대해서 기본적으로 실행되는 핸들러가 있을 수 있다. 
 
 우리는 이를 `e.preventDefault()`를 통해 막을 수 있다.
-
-
