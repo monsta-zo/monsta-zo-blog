@@ -19,7 +19,7 @@ header:
 
 `ref`는 컴포넌트 내부에서 사용할 수 있는 변수이며, `state`와 비슷한 것 같으면서도 다르다. 
 
-가장 큰 특징은 언제나 값을 변경할 수 있다는 것이다. `state`는 `setter`를 통해 값을 변경한다. 하지만 `ref`는 언제든 값을 변경할 수 있다. 그리고 `state`와 다르게 값을 변경해도 컴포넌트가 리렌더링되지 않는다. 하지만 그 값은 기억하고 있는다. 즉 이점에서는 또 `지역변수`와 다르다. 지역변수는 컴포넌트가 리렌더링될 때 마다 값이 초기화 되지만, `ref`는 값을 기억하고 있다. 
+가장 큰 특징은 언제나 값을 변경할 수 있다는 것이다. `state`는 `setter`를 통해 값을 변경한다. 하지만 `ref`는 언제든 값을 변경할 수 있다. 그리고 `state`와 다르게 값을 변경해도 컴포넌트가 **리렌더링되지 않는다**. 한마디로 `ref`는 리렌더링을 요구하지 않는 `state`라고 볼 수 있다. 하지만 그 값은 기억하고 있는다. 즉 이점에서는 또 `지역변수`와 다르다. 지역변수는 컴포넌트가 리렌더링될 때 마다 값이 초기화 되지만, `ref`는 값을 기억하고 있다. 
 
 즉, `ref`와 `state`와 `지역변수`를 비교해보면 아래와 같다.
 
@@ -50,6 +50,8 @@ export default function Counter() {
 
 `ref`는 주로 컴포넌트 외부와 소통하기 위해 사용하는 경우가 많다. 하지만 `ref`의 가장 크고 쓰임새는 바로 **DOM에 접근**하기 위해서이다. 
 
+하지만 특정 값을 기억하고 추적해야하지만, 변경되었을 때 리렌더링이 되는 걸 원하지 않는다면 `useRef`를 사용해보자
+
 ## 2. Refs로 DOM 다루기
 
 *일반 요소들 다루기*
@@ -64,7 +66,7 @@ const myRef = useRef(null);
 <div ref={myRef}>
 ```
 
-이제 `myRef.current`를 통해 해당 DOM에 접근할 수 있으며, `focus()`와 같은 작업을 실행할 수 있다. 
+리액트에서 자동으로 해당 DOM노드를 `myRef`에 할당해준다. 이제 `myRef.current`를 통해 해당 DOM에 접근할 수 있으며, `focus()`와 같은 작업을 실행할 수 있다. 
 
 ```jsx
 import { useRef } from 'react';
@@ -128,4 +130,66 @@ export default function Form() {
 > 
 > 리액트에서 특정 DOM을 제어한다면 그 DOM을 삭제하거나, 수정하면 안된다.
 > 
-> 단순한 `focus()`와 같은 작업은 DOM을 수정하지 않기 때문에 괜찮지만 그 외에 DOM에 변경사항을 가하는 것은 리액트가 수정된 DOM에 대해서 일관성을 잃게되고 여러가지 문제를 야기할 수 있다. 
+> 단순한 `focus()`와 같은 작업은 DOM을 수정하지 않기 때문에 괜찮지만 그 외에 DOM에 변경사항을 가하는 것은 리액트가 수정된 DOM에 대해서 일관성을 잃게되고 여러가지 문제를 야기할 수 있다. 따라서 주로 DOM을 수정해야한다면 우린 `state`를 쓸 때가 많다.
+> 
+> 하지만 성능면에서 리렌더링을 안하는 것이 더 선호될 때가 있다. 이럴 떈 DOM을 직접 조작하곤 한다. 
+
+## 3. callback ref로 DOM에 접근하기
+
+리렌더링될 때마다 DOM에 접근하고 싶을 수 있다. 이때 callback ref를 사용할 수 있다.
+
+```jsx
+function ComponentWithRefRead() {
+  const [text, setText] = React.useState('Some text ...');
+
+  function handleOnChange(event) {
+    setText(event.target.value);
+  }
+
+  const ref = (node) => {
+    if (!node) return;
+
+    const { width } = node.getBoundingClientRect();
+
+    document.title = `Width:${width}`;
+  };
+
+  return (
+    <div>
+      <input type="text" value={text} onChange={handleOnChange} />
+      <div>
+        <span ref={ref}>{text}</span>
+      </div>
+    </div>
+  );
+}
+```
+
+위의 코드는 첫 렌더링 한번에만 `ref` 함수가 실행된다. 우린 `useCallback`을 이용하면 `useEffect`와 같이 어떤 상황마다 함수를 실행할지 정해줄 수 있다. 
+
+```jsx
+function ComponentWithRefRead() {
+  const [text, setText] = React.useState('Some text ...');
+
+  function handleOnChange(event) {
+    setText(event.target.value);
+  }
+
+  const ref = React.useCallback((node) => {
+    if (!node) return;
+
+    const { width } = node.getBoundingClientRect();
+
+    document.title = `Width:${width}`;
+  }, []);
+
+  return (
+    <div>
+      <input type="text" value={text} onChange={handleOnChange} />
+      <div>
+        <span ref={ref}>{text}</span>
+      </div>
+    </div>
+  );
+}
+```
