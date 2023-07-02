@@ -122,10 +122,7 @@ export default function Form() {
     </>
   );
 }
-
 ```
-
-
 
 > **refs를 통해 DOM 조작할 떄 주의해야 할점**
 > 
