@@ -1,5 +1,4 @@
 ---
-
 layout: single
 title: "[React] 합성(composition) "
 categories: React
