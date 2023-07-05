@@ -1,5 +1,4 @@
 ---
-
 layout: single
 title: "[Redux] Redux의 기본 개념들 "
 categories: Redux
