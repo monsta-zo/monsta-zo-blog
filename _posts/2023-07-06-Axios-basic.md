@@ -192,7 +192,7 @@ export default function App() {
       setError(error);
     });
   }, []);
-  
+
   if (error) return `Error: ${error.message}`;
   if (!post) return "No post!"
 
@@ -313,5 +313,3 @@ export default function App() {
   ) 
 }
 ```
-
-
