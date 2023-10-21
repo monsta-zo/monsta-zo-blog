@@ -98,10 +98,10 @@ body {
 }
 
 .page__title {
-  font-size: 30px;
+  font-size: 3em;
   color: #2d3748;
   margin-top: 0;
-  line-height: 1;
+  line-height: 1.5;
   border-bottom: 0;
 
   a {
@@ -124,15 +124,23 @@ body {
 }
 
 .page__content {
+  & > *:nth-child(2) {
+    margin-top: 0 !important;
+  }
+
+  h1 {
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    border-bottom: 1px solid rgb(136, 146, 157);
+  }
+
   h2 {
-    margin-top: 24px !important;
-    margin-bottom: 16px !important;
-    font-size: 1.5em !important;
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    border-bottom: 1px solid rgb(136, 146, 157);
   }
   h3 {
-    font-weight: bold !important;
-    line-height: 1.5;
-    font-size: 1.3em !important;
+    font-size: 1.25em;
   }
 
   h4 {
@@ -151,12 +159,21 @@ body {
   }
 
   blockquote {
-    background: rgb(244, 244, 244);
-    padding: 1px 16px 12px 30px;
+    padding: 0 1em;
+    border-left: 0.25em solid rgb(32, 37, 44);
   }
 
   mark {
     background-color: #ffb1b1;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #0349b4;
   }
 
   h1,
@@ -165,6 +182,10 @@ body {
   h4,
   h5,
   h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
     .header-link {
       position: relative;
       left: 0.5em;
@@ -192,19 +213,9 @@ body {
 
   p,
   dl {
-    font-size: 1.1em;
-    line-height: 32px;
-    letter-spacing: -0.004em;
-    word-break: keep-all;
-    overflow-wrap: break-word;
-
     @include breakpoint(small) {
       line-height: 36px;
     }
-  }
-
-  blockquote p {
-    color: #8e8e8e;
   }
 
   li {
@@ -221,9 +232,6 @@ body {
 
   /* paragraph indents */
   p {
-    margin: 12px 0 0 0;
-    font-weight: 400 !important;
-
     /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
@@ -244,17 +252,12 @@ body {
   }
 
   :not(pre) > code {
-    padding: 2px 2px;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+    margin: 0;
     border: 1px solid #d7e2eb;
-    font-size: 0.8em;
     background: #f4f4f8;
     border-radius: $border-radius;
-
-    &::before,
-    &::after {
-      letter-spacing: -0.2em;
-      content: "\00a0"; /* non-breaking space*/
-    }
   }
 
   dt {

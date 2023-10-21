@@ -6,17 +6,17 @@ div.highlighter-rouge,
 figure.highlight {
   position: relative;
   margin-bottom: 1em;
-  background: #e9ecf3;
+  background: rgb(231, 236, 240);
   color: black;
   font-family: $monospace;
   font-size: 13px;
   line-height: 1.5;
-  border-radius: $border-radius;
+  border-radius: 3px;
 
   > pre,
   pre.highlight {
-    margin-top: 10px;
-    padding: 0.5rem 0.5rem;
+    margin: 0;
+    padding: 16px;
     font-size: 12px;
     white-space: break-spaces;
   }
@@ -90,7 +90,7 @@ figure.highlight {
   }
   .o {
     /* Operator */
-    color: #d73a49;
+    color: rgb(2, 59, 149);
   }
   .p {
     /* Punctuation */
@@ -189,7 +189,7 @@ figure.highlight {
   }
   .nc {
     /* Name.Class */
-    color: #6f42c1;
+    color: #024c1a;
   }
   .no {
     /* Name.Constant */
@@ -221,7 +221,7 @@ figure.highlight {
   }
   .nx {
     /* Name.Other */
-    color: black;
+    color: #702c00;
   }
   .py {
     /* Name.Property */
@@ -245,7 +245,7 @@ figure.highlight {
   }
   .mf {
     /* Literal.Number.Float */
-    color: #009999;
+    color: rgb(2, 59, 149);
   }
   .mh {
     /* Literal.Number.Hex */
@@ -285,7 +285,7 @@ figure.highlight {
   }
   .si {
     /* Literal.String.Interpol */
-    color: $base09;
+    color: rgb(14, 17, 22);
   }
   .sx {
     /* Literal.String.Other */

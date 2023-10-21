@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-03-21-js-입출력.md",
+                "file": "2023-10-20.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,8 +64,17 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "c61924a20717fd76",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2023-03-21-js-입출력.md",
+                "file": "2023-10-20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2023-03-21-js-입출력.md",
+                "file": "2023-10-20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2023-03-21-js-입출력.md"
+                "file": "2023-10-20.md"
               }
             }
           }
@@ -146,8 +155,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bd0f6dab4a403e28",
+  "active": "b0d42851f0bc07a7",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "2023-10-20.md",
+    "_posts/2023-03-21-js-repeat.md",
     "_posts/2023-03-21-js-입출력.md",
     "_posts/2022-11-24-cs-db-05.md",
     "_site/db/cs-db-05/index.html",

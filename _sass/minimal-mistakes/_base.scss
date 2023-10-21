@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #4a5568;
+  color: #0e1116;
   font-family: $global-font-family;
   line-height: 1.5;
 
@@ -27,21 +27,24 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
-  font-family: $header-font-family;
-  font-weight: 600;
+  // line-height: 1.25;
+  // margin-top: 24px;
+  // margin-bottom: 16px;
+  // font-family: $header-font-family;
+  // font-weight: 600;
 }
 
 h1 {
-  margin: 0;
-  padding-bottom: 20px;
-  font-size: 30px;
-  margin-top: 10px;
+  // padding-bottom: 0.3em;
+  // font-size: 2em;
+  // border-bottom: 1px solid rgb(136, 146, 157);
 }
 
 h2 {
-  margin: 20px 0;
-  font-size: $h-size-2;
+  padding-top: 10px;
+  // padding-bottom: 0.3em;
+  // font-size: 1.5em;
+  // border-bottom: 1px solid rgb(136, 146, 157);
 }
 
 h3 {
@@ -71,12 +74,8 @@ p {
 
 u,
 ins {
-  text-decoration: none;
   text-decoration-line: underline;
   text-underline-position: under;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 3.4px;
-  text-decoration-color: #6bdeff;
   // border-bottom: 1px solid $text-color;
 
   a {
@@ -99,12 +98,26 @@ dl,
 figure,
 table,
 fieldset {
+  margin-top: 0;
+  margin-bottom: 16px;
   orphans: 3;
   widows: 3;
 }
 
 ul {
-  padding-left: 25px;
+  padding-left: 2em;
+
+  li > * {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+  padding-left: 2em;
+
+  li > * {
+    margin-bottom: 0;
+  }
 }
 
 /* abbreviations */
@@ -116,15 +129,10 @@ abbr[data-original-title] {
   border-bottom: 1px dotted $text-color;
 }
 
-strong {
-  color: #7b57b2;
-}
-
 /* blockquotes */
 
 blockquote {
-  margin: 12px 0 0 0;
-  border-radius: 7px;
+  margin: 0;
 
   cite {
     font-style: italic;
@@ -168,7 +176,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: $monospace;
+  // font-family: $monospace;
 }
 
 pre {
@@ -352,4 +360,9 @@ input[type="submit"],
 .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
 }

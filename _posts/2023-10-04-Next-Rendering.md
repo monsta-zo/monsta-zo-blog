@@ -27,8 +27,6 @@ Next.js는 다양한 렌더링 방식들을 지원하고 각 페이지별로 입
 
 # CSR과 SSR 개념
 
-<hr>
-
 먼저 Next의 관점이 아닌 통상적인 관점에서 SSR과 CSR에 대해서 알아보자.
 
 ## CSR (Client Side Rendering)
@@ -57,11 +55,7 @@ HTML에 JS를 어디서 입혀주냐? 가 바로 CSR이냐 SSR이냐를 결정�
 
 말 그대로, 클라이언트 측에서 HTML에  JS를 입혀서 렌더링하는 것이다.
 
-
-
 ![loading-ag-962](../../images/2023-10-04-Next-multilayouts/193c7292e00ccd919bb093efc87a2c85dc109a16.png)
-
-
 
 ## SSR (Server Side Rendering)
 
@@ -71,23 +65,15 @@ CSR의 반대이다. 즉, **HTML에 JS를 서버에서 입혀주고 클라이언
 
 말 그대로, 서버에서 미리 HTML에 JS를 렌더링한 후 브라우저로 보내주는 방식이다.
 
-
-
 ![loading-ag-966](../../images/2023-10-04-Next-multilayouts/407a750951183bdc5441d64e1ea0fb8e00b74236.png)
 
-
-
 # Next.js만의 렌더링
-
-<hr>
 
 위에서 CSR과 SSR에 대해서 알아보았다. 하지만 Next.js에서 제공하는 CSR과 SSR은 위에서 알아본 내용들과 개념은 같지만, 방식은 사알짝 다르다. 실제로 Next.js에서는 어떤 방식으로 렌더링하는지 알아보자. 
 
 <br>
 
 그 전에 Next에서의 또 다른 렌더링 방식인 **SSG**와 아주아주 중요한 개념인 **Pre-rendering**에 대해서 먼저 알아 보자.
-
-
 
 ## SSG (Static Site Generation)
 
@@ -107,13 +93,9 @@ SSR과 뭐가 다를까? SSR은 각 페이지가 필요할 때가 되서야 서�
 
 ![loading-ag-1011](../../images/2023-10-04-Next-multilayouts/c4c03413678c328279bd23294e69e6fcc6f33d8a.png)
 
-
-
 그럼 이때까지 배운 CSR, SSR 그리고 SSG는 Next.js에서 어떻게 동작할까? 과연 Next.js의 기본 렌더링 방식은 CSR일까? SSR일까? SSG일까?
 
 # Next.js의 진실과 기본 렌더링 방식
-
-<hr>
 
 Next.js에서 SSR그리고 CSR을 사용하기 위해서는 각 렌더링 방식에 맞는 함수를 사용해야한다. 
 
@@ -121,13 +103,9 @@ Next.js에서 SSR그리고 CSR을 사용하기 위해서는 각 렌더링 방식
 
 - SSG -> `getStaticProps()` 
 
-
-
 그럼 이 두 함수를 둘다 사용하지 않으면 당연히 CSR 방식으로 렌더링을 해야할 것이다. CSR 방식은 클라이언트 측에서 JS를 HTML에 입히기 때문에 브라우저에서 JS를 사용하지 못하게 하면 빈 화면만 나올 것이다. 
 
 ![loading-ag-1100](../../images/2023-10-04-Next-multilayouts/2023-10-10-22-50-02-image.png)
-
-
 
 실제로 현재 개발중인 프로젝트의 회원가입 페이지이며, `getServerSideProps()` , `getStaticProps()` 둘 다 사용하고 있지 않다. 따라서 CSR 방식일 것이다. 그럼 브라우저에서 JS 기능을 꺼보자.
 
@@ -142,8 +120,6 @@ Next.js에서 SSR그리고 CSR을 사용하기 위해서는 각 렌더링 방식
 <br>
 
 미리 모든 페이지의 내용들을 다 렌더링해서 서버에 저장해놓고, 필요할 때 받아와서 사용하는 방식인 것이다. <u>단, 데이터 패칭을 하지 않는 선에서만 미리 SSG 방식으로 렌더링해서 저장해놓는다. </u> 
-
-
 
 > By default, Next.js pre-renders pages using Static Generation without fetching data. Here's an example:
 > 
@@ -168,8 +144,6 @@ Next.js에서 SSR그리고 CSR을 사용하기 위해서는 각 렌더링 방식
 <br>
 
 **반드시 기억하자, Next는 데이터 패칭이 필요없는 선까지는 SSG를 사용한다**
-
-
 
 ## Next의 CSR
 
@@ -197,7 +171,6 @@ const Test = () => {
 };
 
 export default Test;
-
 ```
 
 `useQuery` 를 통해 간단한 문자열 데이터를 받아와서 CSR 방식으로, 렌더링하였다. 
@@ -259,8 +232,6 @@ export default Test;
 
 이러한 과정은 다른 렌더링 방식에서도 똑같다. 
 
-
-
 ## Next의 SSR
 
 > To use Server-side Rendering for a page, you need to `export` an `async` function called `getServerSideProps`. This function will be called by the server on every request.
@@ -268,8 +239,6 @@ export default Test;
 Next에서는 `getServerSideProps` 를 통해 SSR을 할 수 있다. 아래는 SSR을 사용하는 예시 코드이다.
 
 ![loading-ag-1374](../../images/2023-10-04-Next-multilayouts/415d33ffe2853d8575ea21211ebdbf9d820dac6c.png)
-
-
 
 SSR 방식에서는 **"데이터 패칭을 언제 해올 것인지"** 와 **"어디까지 pre-rendering 할 것인지"** 둘의 개념이 모두 포함된다. 일단 CSR과 똑같이
 
@@ -289,8 +258,6 @@ SSR 방식에서는 **"데이터 패칭을 언제 해올 것인지"** 와 **"어
 
 정리하자면, **Next에서 SSR을 사용한다는 것은 출력할 데이터 패칭을 SSR로 한다는 것이고, 나머지 부분은 SSG로 미리 만들어서 서버에 저장한다는 것** 이다.
 
-
-
 ## Next의 SSG
 
 > Some pages require fetching external data for pre-rendering. There are two scenarios, and one or both might apply. In each case, you can use these functions that Next.js provides:
@@ -306,10 +273,6 @@ SSG 방식은 이전보다 간단하다. 왜냐면 데이터 패칭을 해오는
 
 즉, 모든 부분에서 SSG를 사용한다.
 
-
-
-
-
 # 마무리
 
 **Next의 렌더링 방식과 우리가 알던 렌더링 방식을 혼돈하지 말자.**
@@ -319,3 +282,5 @@ Next에서는 최대한 많은 부분은 SSG 방식으로 미리 서버에 페�
 그리고, 각 페이지의 특성에 맞춰서 여러 렌더링 방식들을 적절히 활용해보자.
 
 
+
+[here](www.naver.com)

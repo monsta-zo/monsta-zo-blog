@@ -484,7 +484,7 @@
 }
 
 .nav__title {
-  margin: 0;
+  margin: 0 !important;
   padding: 0.5rem 0.75rem;
   font-family: $sans-serif-narrow;
   font-size: $type-size-5;
@@ -507,6 +507,7 @@
      ========================================================================== */
 
 .toc {
+  display: none !important;
   font-family: $sans-serif-narrow;
   color: $gray;
   background-color: $background-color;
@@ -514,6 +515,10 @@
   border-radius: $border-radius;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
+
+  & header {
+    margin: 0;
+  }
 
   .nav__title {
     color: #fff;
@@ -552,7 +557,8 @@
   a {
     display: block;
     padding: 0.25rem 0.75rem;
-    color: #34495e;
+    text-decoration: none !important;
+    color: #34495e !important;
     font-weight: bold;
     line-height: 1.5;
 
